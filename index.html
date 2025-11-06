@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelCanvas Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-primary">Michael Okape</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-900 hover:text-primary transition">Home</a>
+                    <a href="#about" class="text-gray-900 hover:text-primary transition">About</a>
+                    <a href="#work" class="text-gray-900 hover:text-primary transition">Work</a>
+                    <a href="#contact" class="text-gray-900 hover:text-primary transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <label for="mobile-menu-toggle" class="cursor-pointer">
+                        <i data-feather="menu"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <input type="checkbox" id="mobile-menu-toggle" class="hidden">
+        <div class="mobile-menu hidden md:hidden bg-white absolute w-full left-0 px-4 pb-4 shadow-md">
+            <div class="flex flex-col space-y-4 pt-2">
+                <a href="#" class="text-gray-900 hover:text-primary transition py-2">Home</a>
+                <a href="#about" class="text-gray-900 hover:text-primary transition py-2">About</a>
+                <a href="#work" class="text-gray-900 hover:text-primary transition py-2">Work</a>
+                <a href="#contact" class="text-gray-900 hover:text-primary transition py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+<!-- Hero Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Hi, I'm <span class="text-primary">Michael</span></h1>
+                    <h2 class="text-2xl md:text-3xl text-secondary mb-6">Frontend Developer</h2>
+                    <p class="text-gray-600 mb-8">I create beautiful, responsive websites with modern technologies.</p>
+                    <a href="#work" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition">View My Work</a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-lg">
+                        <img src="images/quick.png" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Skills</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="text-secondary mr-2"></i>
+                            <span>HTML/CSS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="text-secondary mr-2"></i>
+                            <span>JavaScript</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="text-secondary mr-2"></i>
+                            <span>React</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="text-secondary mr-2"></i>
+                            <span>UI/UX Design</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">My Story</h3>
+                    <p class="text-gray-600 mb-4">I'm a passionate frontend developer with 1 year of experience creating beautiful and functional websites. I love turning ideas into reality through code.</p>
+                    <p class="text-gray-600">When I'm not coding, you can find me playing chess, reading, or experimenting with new design trends. I believe in continuous learning and pushing creative boundaries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">My Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img src="http://static.photos/technology/640x360/1" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">E-commerce Site</h3>
+                        <p class="text-gray-600 mb-4">A modern shopping experience built with React.</p>
+                        <a href="#" class="text-primary hover:underline">View Project</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img src="http://static.photos/technology/640x360/2" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Portfolio Redesign</h3>
+                        <p class="text-gray-600 mb-4">Minimalist portfolio for a photographer.</p>
+                        <a href="#" class="text-primary hover:underline">View Project</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img src="http://static.photos/technology/640x360/3" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Dashboard UI</h3>
+                        <p class="text-gray-600 mb-4">Analytics dashboard with interactive charts.</p>
+                        <a href="#" class="text-primary hover:underline">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Contact Info</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="text-secondary mr-4"></i>
+                            <span>gtrmichaels@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="phone" class="text-secondary mr-4"></i>
+                            <span>+254 (768) 099-235</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="map-pin" class="text-secondary mr-4"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-600 mb-4 md:mb-0">© 2025 Michael  Okape. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-primary transition">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>feather.replace();</script>
+</body>
+</html>
